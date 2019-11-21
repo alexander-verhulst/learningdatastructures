@@ -5,19 +5,21 @@ package ds.stack;
 public class Stack {
 
     private int maxSize; //How big our container is
-    private long[] stackArray;  //Container that stores the list of items
+    private char [] stackArray; //Trying to reverse string. Change 1.
+   // private long[] stackArray;  //Container that stores the list of items
     private int top; //index position of last item placed on stack
 
     //Create a constructor to initilize data structure
     public Stack(int size) {
         this.maxSize = size;
-        this.stackArray = new long[maxSize];
-        this.top = -1; //will be at 0 index of array
+        this.stackArray = new char[maxSize]; //Change 2. Changed from long to char
+        this.top = -1; //will be at 0 index of array. Arrays start at 0 index
     }
 
     //Create methods to support push and pop operations
 
-    public void push (long j) { //Doesn't return anything, just pushes on top of stack. Accepts value of type long
+    //change 3. Changed long to char j
+    public void push (char j) { //Doesn't return anything, just pushes on top of stack. Accepts value of type long
 
         if (isFull()) {
             System.out.println("This stack is already full"); //THIS ESTABLISHES SIZES ON STACKS
@@ -30,11 +32,12 @@ public class Stack {
         stackArray[top] = j; //Top position is what value was placed on top */
     }
 
-    public long pop() { //Returns item that was popped
+    //change 4. changed long to char
+    public char pop() { //Returns item that was popped
 
         if (isEmpty()) {
             System.out.println("The stack is already empty"); //This is for if your stack has a limit
-            return -1;
+            return '0'; //change 5. changed -1 to zero
         } else {
             int old_top = top;
             top--;
@@ -47,7 +50,8 @@ public class Stack {
     }
 
     //Method for peak. Returns item that is currently on top for viewing what the value is
-    public long peak() {
+   //change 6. changed long to char
+    public char peak() {
         return stackArray[top];
     }
 

@@ -4,6 +4,13 @@ public class Main {
 
     public static void main(String[] args) {
 
+        int x = 3;
+        int y = x;
+        System.out.println("old value of y" + y);
+
+        x = 5;
+        System.out.println("new value of y" + y);
+
         int[][] myNumbers = { {1, 2, 3, 4},
                               {5, 6, 7},
                               {8, 9, 10}
@@ -35,6 +42,10 @@ public class Main {
         System.out.println(g);
 
         System.out.println("Third array");
+
+        int test = 12;
+
+        System.out.println(test + 12);
 
 
 
